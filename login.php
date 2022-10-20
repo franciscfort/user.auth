@@ -1,18 +1,20 @@
 <?php
 if(isset($_POST['submit'])){
-    $username = "comfort"; 
-    $password = "1234cfort";
+    $username = "email"; 
+    $password = "password";
 
 loginUser($email, $password);
 
 }
 
 function loginUser($email, $password){
-    /*
-        Finish this function to check if username and password 
-    from file match that which is passed from the form
-    */
+  
+session_start();
+if (! empty($_SESSION["username"])) {
+    require_once './view/dashboard.php';
+} else {
+    require_once './view/login.php';
+
+echo "BACK TO DASHBOARD";
 }
-
-echo "HANDLE THIS PAGE";
-
+?>
