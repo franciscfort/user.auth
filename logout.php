@@ -7,4 +7,4 @@ destroy the session and redirect to login page
 */
 }
 
-echo "HANDLE THIS PAGE";
+echo "LOGIN";
